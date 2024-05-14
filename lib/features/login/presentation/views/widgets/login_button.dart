@@ -1,4 +1,4 @@
-import 'package:app_1/Tests/Pages/test.dart';
+import 'package:app_1/Tests/Widgets/buttom_Bar.dart';
 import 'package:flutter/material.dart';
 
 class LogInButton extends StatelessWidget {
@@ -9,16 +9,15 @@ class LogInButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 60),
+      padding: const EdgeInsets.symmetric(horizontal: 80),
       child: GestureDetector(
         onTap: () {
           Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-            return Tests();
+            return ButtomBar();
           }));
         },
         child: Container(
-          width: 150,
-          height: 40,
+          height: 50,
           decoration: buttonDecoration(),
           child: const Center(
             child: Text(
@@ -37,7 +36,10 @@ class LogInButton extends StatelessWidget {
   BoxDecoration buttonDecoration() {
     return const BoxDecoration(
       color: Color.fromARGB(255, 135, 226, 75),
-      borderRadius: BorderRadius.only(topLeft: Radius.circular(25)),
+      borderRadius: BorderRadius.only(
+          topRight: Radius.circular(10),
+          bottomLeft: Radius.circular(10),
+          bottomRight: Radius.circular(10)),
     );
   }
 }

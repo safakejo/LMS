@@ -1,5 +1,6 @@
-import 'package:app_1/Tests/Pages/test.dart';
-import 'package:app_1/features/splash/presentation/views/splashView.dart';
+import 'package:app_1/features/Home%20page/presentation/views/homepage_view.dart';
+import 'package:app_1/features/Tests/presentation/views/test_view.dart';
+import 'package:app_1/features/adv/presentation/views/adv_view.dart';
 import 'package:flutter/material.dart';
 
 class ButtomBar extends StatefulWidget {
@@ -10,10 +11,7 @@ class ButtomBar extends StatefulWidget {
 }
 
 class _ButtomBarState extends State<ButtomBar> {
-  List<Widget> listOptions = <Widget>[
-    SplashView(),
-    Tests(),
-  ];
+  List<Widget> listOptions = <Widget>[HomePage(), Tests(), Adv_Page()];
 
   int current_Index = 0;
 
@@ -21,9 +19,8 @@ class _ButtomBarState extends State<ButtomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        elevation: 5,
-        fixedColor: Colors.black,
-        // selectedItemColor: Colors.purple,
+        unselectedItemColor: Colors.black,
+        selectedItemColor: Colors.purple,
         currentIndex: current_Index,
         onTap: ((index) {
           setState(() {

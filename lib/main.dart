@@ -1,4 +1,4 @@
-import 'package:app_1/Tests/Widgets/buttom_Bar.dart';
+import 'package:app_1/features/splash/presentation/views/splashView.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,6 +12,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: ButtomBar());
+        debugShowCheckedModeBanner: false, home: SplashView());
   }
 }

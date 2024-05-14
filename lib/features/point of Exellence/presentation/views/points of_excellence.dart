@@ -1,4 +1,5 @@
-import 'package:app_1/points%20of%20excellence/widgets/ground_image.dart';
+import 'package:app_1/core/functions/backgroundimage.dart';
+import 'package:app_1/core/functions/drawer.dart';
 import 'package:flutter/material.dart';
 
 class PointsOfExcellence extends StatelessWidget {
@@ -7,28 +8,21 @@ class PointsOfExcellence extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: const Drawer(),
+        drawer: const SaidDrawer(),
         appBar: AppBar(
           backgroundColor: Colors.white,
           title:
-              const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Icon(Icons.star),
-            SizedBox(
-              width: 8,
-            ),
+             
             Text(
               "Points Of Excellence",
               style: TextStyle(fontSize: 25),
             )
-          ]),
         ),
-        body: const Stack(
-          children: [
-            GroundImage(),
-            Column(children: [
-              Row(children: []),
-            ])
-          ],
+        body: Container(
+          decoration: backGroundImage('assets/images/point_image.pngimage'),
+          child: Column(children: [
+            Row(children: []),
+          ]),
         ));
   }
 }

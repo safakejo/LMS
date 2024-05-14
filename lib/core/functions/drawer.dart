@@ -1,15 +1,12 @@
-import 'package:app_1/points%20of%20excellence/pages/points%20of_excellence.dart';
+import 'package:app_1/features/point%20of%20Exellence/presentation/views/points%20of_excellence.dart';
 import 'package:flutter/material.dart';
 
-class Drawer extends StatelessWidget {
-  const Drawer({super.key, required ListView child});
+class SaidDrawer extends StatelessWidget {
+  const SaidDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        drawer: Drawer(
-      //surfaceTintColor: Colors.black,
-      //shape: ,
+    return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
@@ -25,14 +22,14 @@ class Drawer extends StatelessWidget {
             currentAccountPicture: CircleAvatar(
               child: ClipOval(
                   child: Image.asset(
-                'assets/images/colourful.png',
+                'assets/images/drawer_image.png',
                 fit: BoxFit.cover,
               )),
             ),
             decoration: const BoxDecoration(
                 image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage('assets/images/colourful.png'))),
+                    image: AssetImage('assets/images/drawer_image.png'))),
           ),
           ListTile(
             leading: Icon(Icons.star),
@@ -62,6 +59,6 @@ class Drawer extends StatelessWidget {
           )
         ],
       ),
-    ));
+    );
   }
 }

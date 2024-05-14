@@ -1,7 +1,9 @@
-import 'package:app_1/Tests/Widgets/button_Test.dart';
-import 'package:app_1/Tests/Widgets/containerText_Test.dart';
-import 'package:app_1/Tests/Widgets/background_Image.dart';
-import 'package:app_1/Tests/Widgets/test_Image.dart';
+import 'package:app_1/core/functions/backgroundimage.dart';
+import 'package:app_1/core/functions/drawer.dart';
+import 'package:app_1/features/Tests/presentation/views/rowText_Test.dart';
+import 'package:app_1/features/Tests/presentation/views/widget/button_Test.dart';
+import 'package:app_1/features/Tests/presentation/views/widget/containerText_Test.dart';
+import 'package:app_1/features/Tests/presentation/views/widget/test_Image.dart';
 import 'package:flutter/material.dart';
 
 class Tests extends StatefulWidget {
@@ -15,24 +17,14 @@ class _TestsState extends State<Tests> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        drawer: const Drawer(),
+        drawer: SaidDrawer(),
         appBar: AppBar(
           backgroundColor: Colors.white,
-          title:
-              const Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Icon(Icons.edit_square),
-            SizedBox(
-              width: 8,
-            ),
-            Text(
-              "Tests",
-              style: TextStyle(fontSize: 25),
-            )
-          ]),
+          title: RowText_Test(),
         ),
-        body: const Stack(children: [
-          BackgroundImage(),
-          Column(
+        body: Container(
+          decoration: backGroundImage('assets/images/test_image.png'),
+          child: Column(
             children: [
               ContainerText_Test(),
               SizedBox(
@@ -64,6 +56,6 @@ class _TestsState extends State<Tests> {
               )
             ],
           ),
-        ]));
+        ));
   }
 }

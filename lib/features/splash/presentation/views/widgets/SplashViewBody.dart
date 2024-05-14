@@ -12,7 +12,7 @@ class SplashViewBody extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: 800,
-      decoration: backGroundImage("assets/images/p1.png"),
+      decoration: backGroundImage("assets/images/splash_image.png"),
       child: const TextsColumn(),
     );
   }

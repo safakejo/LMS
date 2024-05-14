@@ -1,4 +1,4 @@
-import 'package:app_1/features/login/presentation/views/loginView.dart';
+import 'package:app_1/features/who/presentation/views/who_vieww.dart';
 import 'package:flutter/material.dart';
 
 class ArrowButton extends StatelessWidget {
@@ -11,7 +11,7 @@ class ArrowButton extends StatelessWidget {
     return IconButton(
       onPressed: () {
         Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-          return const LogIn();
+          return const Who();
         }));
       },
       icon: const Icon(Icons.arrow_circle_right_rounded,
